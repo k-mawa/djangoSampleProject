@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container mt-3">
+  <h3>新規会員登録</h3>
+  <br>
+<form action="" method="POST">
+    {{ form.non_field_errors }}
+    {% for field in form %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+        {{ field }}
+        {{ field.errors }}
+    </div>
+    {% endfor %}
+    {% csrf_token %}
+    会員登録をもって<a href="/legalinfo_detail/1">利用規約</a>に同意します<br>
+    <button type="submit" class="btn btn-primary btn-lg">登録</button>
+</form>
+</div>
+{% endblock %}

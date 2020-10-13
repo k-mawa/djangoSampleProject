@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container mt-3">
+  <h3>会員情報の登録</h3>
+  <br>
+  ※利用前に必須項目は必ず記入くださいませ
+  <br><br>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary btn-lg" >登録</button>
+</form>
+<br>
+</div>
+{% endblock %}

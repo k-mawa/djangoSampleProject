@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container mt-3">
+    {% include 'navbar_inside_map.html' %}<br>
+<table class="table">
+    <tbody>
+        ユーザー情報 
+        <tr>
+            <th>登録メールアドレス</th>
+            <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <th>ユーザー名</th>
+            <td>{{ user.first_name }}</td>
+        </tr>
+        <tr>
+            <th>住所</th>
+            <td>{% if user.address_one %}{{ user.address_one }}{% endif %}{% if user.address_two %}{{ user.address_two }}{% endif %}{% if user.address_three %}{{ user.address_three }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>緊急時連絡先電話番号その1</th>
+            <td>{% if user.tel_one %}{{ user.tel_one }}{% endif %}{% if not user.tel_one %}(未設定){% endif %}</td>
+        </tr>
+        <tr>
+            <th>緊急時連絡先電話番号その2</th>
+            <td>{% if user.tel_two %}{{ user.tel_two }}{% endif %}{% if not tel_two %}(未設定){% endif %}</td>
+        </tr>
+        <hr>
+        <tr>
+            <th>ability_point</th>
+            <td>{{ user.ability_point }}</td>
+        </tr>
+        <tr>
+            <th>liked_point</th>
+            <td>{{ user.liked_point }}</td>
+        </tr>
+        <tr>
+            <th>pv_point</th>
+            <td>{{ user.pv_point }}</td>
+        </tr>
+        <tr>
+            <th>pv_point</th>
+            <td>{{ user.pv_point }}</td>
+        </tr>
+        <tr>
+            <th>アカウントタイプ</th>
+            <td>{% if user.account_type == 0 %}シンプルユーザー{% endif %}</td>
+        </tr>
+        <tr>
+            <th>クレジットポイント残高(1ポイントで1通メール送信可能です。)</th>
+            <td>{{ user.credit_point }}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<a class="nav-link" href="{% url 'register:user_update' user.pk %}"><button type="submit" class="btn btn-primary btn-lg" >ユーザー情報更新</button></a>
+<br>
+</div>
+
+{% endblock %}
