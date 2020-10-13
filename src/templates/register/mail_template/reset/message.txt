@@ -5,5 +5,5 @@
 再設定用URL
 {{ protocol}}://{{ domain }}{% url 'register:password_reset_confirm' uid token %}
 
-Supporting Music運営事務局
-Mail: sup.mus.2020@gmail.com
+運営事務局
+Mail: 

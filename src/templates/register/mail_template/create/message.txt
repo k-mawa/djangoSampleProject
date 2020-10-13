@@ -6,5 +6,5 @@
 本登録用URL
 {{ protocol}}://{{ domain }}{% url 'register:user_create_complete' token %}
 
-Supporting Music運営事務局
-Mail: sup.mus.2020@gmail.com
+運営事務局
+Mail: 
