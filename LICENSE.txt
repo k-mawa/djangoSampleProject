@@ -1,0 +1,21 @@
+Open Source Attribution Notice
+
+This product contains the following software:
+
+django
+Copyright (c) Django Software Foundation and individual contributors.
+https://github.com/django/django/blob/master/LICENSE
+The source code for this software is available from
+https://github.com/django/django
+
+django-rest-framework
+Copyright © 2011-present, Encode OSS Ltd. All rights reserved.
+https://github.com/encode/django-rest-framework/blob/master/LICENSE.md
+The source code for this software is available from
+https://github.com/encode/django-rest-framework
+
+django-register-sample
+Copyright (c) 2018 Narito Takizawa
+licensed under the MIT License.
+The source code for this software is available from
+https://github.com/naritotakizawa/django-register-sample
