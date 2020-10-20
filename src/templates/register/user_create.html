@@ -2,8 +2,6 @@
 {% block content %}
 {% include 'navbar.html' %}
 <div class="container mt-3">
-  <h3>新規会員登録</h3>
-  <br>
 <form action="" method="POST">
     {{ form.non_field_errors }}
     {% for field in form %}
@@ -14,8 +12,7 @@
     </div>
     {% endfor %}
     {% csrf_token %}
-    会員登録をもって<a href="/legalinfo_detail/1">利用規約</a>に同意します<br>
-    <button type="submit" class="btn btn-primary btn-lg">登録</button>
+    <button type="submit" class="btn btn-primary btn-lg">送信</button>
 </form>
 </div>
 {% endblock %}

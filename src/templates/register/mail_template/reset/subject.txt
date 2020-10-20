@@ -1,1 +1,1 @@
-－パスワードの再設定
+djangoSampleProject　－　パスワードの再設定

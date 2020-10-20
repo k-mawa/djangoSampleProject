@@ -1,1 +1,1 @@
-－会員登録
+djangoSampleProject　－　会員登録

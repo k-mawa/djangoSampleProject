@@ -1,9 +1,8 @@
-お客様
+{{ user.username }} 様
 
 下記URLよりサイトにアクセスの上、パスワードの再設定を行ってください。
 
 再設定用URL
 {{ protocol}}://{{ domain }}{% url 'register:password_reset_confirm' uid token %}
 
-運営事務局
-Mail: 
+djangoSampleProject

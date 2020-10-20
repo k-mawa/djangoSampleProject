@@ -1,25 +1,31 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 {% include 'navbar.html' %}
-<div class="container mt-3">
-<h3>ログイン</h3>
-<br>
-<form action="" method="POST">
-    {{ form.non_field_errors }}
-    {% for field in form %}
-    <div class="form-group">
-        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
-        {{ field }}
-        {{ field.errors }}
-    </div>
-    {% endfor %}
-    {% csrf_token %}
-    <button type="submit" class="btn btn-primary btn-lg">送信</button>
-</form>
+<div class="row">
+    <!-- 左側、ログインエリア -->
+    <div class="card col-md-12">
+        <div class="card-body">
+            <form action="{% url 'register:login' %}" method="POST">
+                {{ form.non_field_errors }}
+                {% for field in form %}
+                    {{ field }}
+                    {{ field.errors }}
+                    <hr>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary btn-lg btn-block" >ログイン</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% csrf_token %}
+            </form>
+        </div>
+    </div><!-- 左側、ログインエリアおわり -->
 
-<br>
-<a href="/password_reset">パスワードを忘れた方はこちら</a>
-<br><br>
-<a href="/user_create">会員登録がまだの方はこちら</a>
+    <!-- 右側、会員登録エリア -->
+    <div class="card col-md-12">
+        <div class="card-body">
+            <a href="/contact" class="btn btn-primary btn-lg btn-block" >会員登録する</a><hr>
+            <a href="/register/password_reset/">パスワードを忘れた方</a>
+        </div>
+    </div><!-- 右側、会員登録エリアおわり -->
 </div>
 {% endblock %}

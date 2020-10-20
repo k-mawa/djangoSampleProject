@@ -1,16 +1,21 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+
+
+    <style>
+    {% block style %}
+
+    {% endblock %}
+    </style>
+
+
 {% block content %}
 {% include 'navbar.html' %}
-<div class="container mt-3">
-<h3>ログアウト</h3>
-<br>
-
-ログアウトしました<br>
-ご利用ありがとうございました<br>
-<br><br>
-
-
-<br>
-<a href="/login/">ユーザーログイン画面へ</a>
-</div>
+<div class="container">
+  <div class="jumbotron mt-4">
+    <h1 class="display-4">djangoSampleProject</h1>
+    <p class="lead">ログアウトしました。ご利用ありがとうございました。</p>
+    <hr class="my-4">
+  </div><!-- /.jumbotron -->
+</div><!-- /.container -->
 {% endblock %}

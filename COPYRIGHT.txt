@@ -19,3 +19,8 @@ Copyright (c) 2018 Narito Takizawa
 licensed under the MIT License.
 The source code for this software is available from
 https://github.com/naritotakizawa/django-register-sample
+
+AdminLTE
+licensed under the MIT License.
+The source code for this software is available from
+https://github.com/ColorlibHQ/AdminLTE

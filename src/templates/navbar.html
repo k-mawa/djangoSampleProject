@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+      <div class="container">
+        {% if not request.user.is_authenticated %}
+        <a class="navbar-brand" href="/">djangoSampleProject</a>
+        {% endif %}
+        {% if request.user.is_authenticated %}
+        <a class="navbar-brand" href="/">djangoSampleProject</a>
+        {% endif %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {% if request.user.is_authenticated %}
+　            <li class="nav-item">
+                  <a class="nav-link" href="#">ご利用者：〇〇さん</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="/my_index">マイページ</a>
+              </li>
+              {% endif %}
+              {% if not request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="/login">無料会員登録/ログイン</a>
+              </li>
+              {% endif %}
+              {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">ログアウト</a>
+              </li>
+              {% endif %}
+          </ul>
+        </div>
+      </div>
+</nav>

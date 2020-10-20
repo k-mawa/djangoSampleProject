@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="webappforPiIsRaspberrypi">
+    <meta name="description" content="webappforPiIsRaspberrypi is free tool for raspberry pi">
+    <meta name="author" content="kosuke mawatari">
+
+
+    <link rel="icon" href="#">
+
+    <title>webappforPi</title>
+
+    {% include 'head_css.html' %}
+
+    {% block head %}{% endblock %}
+
+
+    <style>
+    {% block style %}{% endblock %}
+    </style>
+
+
+
+</head>
+
+  <body class="page">
+            {% block content %}
+
+            {% endblock %}
+    <footer class="py-5 bg-info">
+      <div class="container">
+        <p class="m-0 text-center text-white"> <a href="/documents_detail/1">利用規約・プライバシーポリシー等</a>・<a href="/contact">お問い合わせ</a></p>
+        <p class="m-0 text-center text-white">Copyright &copy; djangoSampleProject 2020</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    {% include "javascript.html" %}
+
+
+  </body>
+</html>
