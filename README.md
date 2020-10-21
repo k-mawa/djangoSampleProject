@@ -1,7 +1,7 @@
 # django Sample Project 
   
 [en]  
-django Sample Project This is a sample project made by django. We will gradually expand the functions.
+django Sample Project This is a sample project made by django. We will gradually expand the functions.It is an MIT license. Feel free to use.
   
 # django製のサンプルプロジェクト
   
