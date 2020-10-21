@@ -1,35 +1,45 @@
-# djangoSampleProject django製のサンプルプロジェクト
-
+# django Sample Project 
+  
+[en]  
 django Sample Project This is a sample project made by django. We will gradually expand the functions.
-
+  
+# django製のサンプルプロジェクト
+  
+[日本語]  
 django Sample Project
 django製のサンプルプロジェクトです。
 徐々に機能拡張していきます。MITライセンスですご自由にお使いください
-
+  
 # architecture アーキテクチャ 
-
+  
+[en]  
 Django local defaults for easy customization.
 
  - DB: sqlite3
  - Static file storage: Local (non-upload files, etc .: `` `static_in_environment / static_root``` ・ ``` static_in_produciton / our_static``` ・ Upload files, etc .: `` `static_in_environment / media_root```)
-
+  
+[日本語]  
 カスタムしやすいようにDjangoローカル初期設定です。
 
  - DB:sqlite3
  - 静的ファイルストレージ:ローカル(非アップロードファイルなど：```static_in_environment/static_root```・```static_in_produciton/our_static```・アップロードファイルなど：```static_in_environment/media_root```)
-
+  
 # Implemented features 実装済み機能
+  
+[en]  
 
  - Member attribute DB definition
  - Login / Logout
 
+[日本語]  
  - 会員属性DB定義
  - ログイン・ログアウト
-
+  
 # how to use 使い方
-
+  
+[en]    
 You can check the behavior locally by entering the following command.
-
+  
 ```
 git clone git@github.com:k-mawa/djangoSampleProject.git
 cd djangoSampleProject
@@ -38,8 +48,9 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
-then see ```127.0.0.1:8000```
-
+then see ```127.0.0.1:8000```  
+  
+[日本語]  
 下記コマンドを入力したらローカルで挙動確認できます。
 
 ```
