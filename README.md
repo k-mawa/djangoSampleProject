@@ -34,7 +34,21 @@ Django local defaults for easy customization.
 [日本語]  
  - 会員属性DB定義
  - ログイン・ログアウト
+
+# Features to be implemented 実装予定の機能
   
+[en]  
+ - Member registration email authentication
+ - Web API by DjangoRESTFramework
+ - Web API token authentication by JWT
+ - Map display by leaflet.js
+
+[日本語]  
+ - 会員登録メール認証
+ - DjangoRESTFramework によるWeb API
+ - JWTによるWebAPIトークン認証
+ - leaflet.jsによる地図表示
+
 # how to use 使い方
   
 [en]    
